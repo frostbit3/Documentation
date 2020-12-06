@@ -1,0 +1,14 @@
+name: GitHub Pages deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    name: deploy to github pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Adzz/yarn_command_action@v1.0.0
+        with:
+          command: GIT_USER=frostbit3 USE_SSH=true yarn deploy
