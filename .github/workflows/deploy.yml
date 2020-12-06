@@ -1,8 +1,11 @@
 name: GitHub Pages deploy
 on:
-  push:
+  pull_request:
     branches:
       - master
+#   push:
+#     branches:
+#       - master
 jobs:
   deploy:
     name: deploy to github pages
